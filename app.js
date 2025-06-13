@@ -53,7 +53,7 @@ app.get("/listSchools", async (req, res) => {
     if (isNaN(userLat) || isNaN(userLon)) {
       return res
         .status(400)
-        .json({ error: "Latitude and longitude are in vaild" });
+        .json({ error: "Latitude and longitude are invaild" });
     }
 
     const [schools] = await pool.promise().query("SELECT * FROM schools");
